@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MiXplorer</title>
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+
+    <script language="javascript" type="text/javascript">
+		<!--
+        function $(id){return document.getElementById(id)}
+        function startUpload() {
+			var element = $('mfile');
+			var file = element.files[0];
+			return file != null;
+		}
+        //-->
+    </script>
+</head>
+<body>
+<h3 class="directory">%s</h3>
+
+<h2 class="deviceName">%s</h2><br/>
+
+<div id="content">
+    <form id="mform" name="mform" style="display:%s" enctype="multipart/form-data" accept-charset="UTF-8" method="post"
+          onsubmit="javascript:return startUpload();"><input id="mfile" name="mfile" type="file"
+                                                             size="30"/><input type="submit"
+                                                                               class="sbtn"
+                                                                               value="$l:upload"/>
+    </form>
+</div>
+<!-- Share -->
+<div style="display:%s"><a target="_blank" href="%s">$l:download</a></div>
+<br/>
+<ul>%s</ul>
+<br/>
+</body>
+</html>
